@@ -14,7 +14,7 @@ const regexes = {
     /^\b(?:[a-eg-z]|f(?!ile|or|irst\b))\w*\b((?!file|for|first).*)$/,
   cOctal: "",
   restrictedFloatingPoint: /^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$/, // rn this is just floating point #s
-  palindrome2358: /(.)(((.)(.))?\1)?(((.)(.)(.))?\1)/,
+  palindrome2358: /^(.).?\1$|^(.)(.)(.){3}$|^(.)(.)(.)(.)(.){4}$/,
   noNegativeIntLits: /(?<![-\d])(\d+)/,
   repeated: /^^([a-z]*)\1$/,
 }
