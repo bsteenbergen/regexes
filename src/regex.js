@@ -14,7 +14,7 @@ const regexes = {
     /^\b(?:[a-eg-z]|f(?!ile|or|irst\b))\w*\b((?!file|for|first).*)$/,
   cOctal: "",
   restrictedFloatingPoint: /^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$/, // rn this is just floating point #s
-  palindrome2358: /^[a-z]{2}|[a-z]{3}|[a-z]{5}|[a-z]{8}$/,
+  palindrome2358: /(.)(((.)(.))?\1)?(((.)(.)(.))?\1)/,
   noNegativeIntLits: /(?<![-\d])(\d+)/,
   repeated: /^^([a-z]*)\1$/,
 }
@@ -22,3 +22,27 @@ const regexes = {
 export function matches(name, string) {
   return regexes[name].test(string)
 }
+
+/** 
+ * DONE
+ * canadianPostalCode
+ * visa
+ * noNegativeIntLits
+ * repeated
+ * 
+ * IN PROG
+ * masterCard    
+ * notTHreeEndingIn00
+ * sevenThroughThirtyOne
+ * mLComment
+ * restrictedFloatingPoint
+ * palindrome2358
+ * 
+ * TODO
+ * adaFloat
+ * divisibleBy32
+ * notFileForFirstNoLookAround
+ * c0ctal
+ * notFileForFirstWithLookAround
+ * 
+ * */ 
