@@ -10,7 +10,9 @@ const regexes = {
   divisibleBy32: /^0{1,4}$|^[01]*00000$/,
   sevenThroughThirtyOne: /^[7-9]$|^([12]\d|3[01])$/,
   mLComment: /^\(\*.*\*\)$/,
-  notFileForFirstNoLookAround: '',
+  notFileForFirstNoLookAround: /^$|^[A-Za-eg-z][A-Za-z]*|^f[A-Za-hj-np-z][A-Za-z]*|^fi[A-Za-km-qs-z][A-Za-z]*$|^fil[A-Za-df-z][A-Za-z]*$|^file[A-Za-z]+$|^for[A-Za-z]+$|^fir[A-Za-rt-z][A-Za-z]*$|^firs[A-Za-su-z][A-Za-z]*$|^first[A-Za-z]+$/,
+  
+  //[^a-eg-z]+[a-z]*$|^f[a-hj-np-z]$|^fi[a-km-qs-z]*$|^fil[a-df-z]*$|^file[a-z]+$|/,
   notFileForFirstWithLookAround: /^(?!(file|for|first)$).*$/,
   cOctal: /^0[0-7]*$/,
   restrictedFloatingPoint: /^[-+]?[0-9]+()\.?([0-9])*(([eE][-+]?)?[0-9]{1,3})?$/,
