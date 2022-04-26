@@ -12,7 +12,7 @@ const regexes = {
   notFileForFirstNoLookAround: "",
   notFileForFirstWithLookAround: /^(?!(^file$)|(^for$)|(^first$)).*/,
   cOctal: "",
-  restrictedFloatingPoint: /^[-+]?[0-9]*\.?([eE]?[0-9])*(([eE][-+])?[0-9]+)?$/,
+  restrictedFloatingPoint: /^[-+]?[0-9]+()\.?([0-9])*(([eE][-+]?)?[0-9]{1,3})?$/,
   palindrome2358: /^(.)(?:(.)(?:(.)\3|\2?\2))?\1$/,
   noNegativeIntLits: /(?<![-\d])(\d+)/,
   repeated: /^^([a-z]*)\1$/,
