@@ -10,8 +10,7 @@ const regexes = {
   sevenThroughThirtyOne: /^[7-9]$|^([12]\d|3[01])$/,
   mLComment: /^\(\*.*\*\)$/,
   notFileForFirstNoLookAround: "",
-  notFileForFirstWithLookAround:
-    /^\b(?:[a-eg-z]|f(?!ile|or|irst\b))\w*\b((?!file|for|first).*)$/,
+  notFileForFirstWithLookAround: /^(?!(^file$)|(^for$)|(^first$)).*/,
   cOctal: "",
   restrictedFloatingPoint: /^[-+]?[0-9]*\.?([eE]?[0-9])*(([eE][-+])?[0-9]+)?$/,
   palindrome2358: /^(.)(?:(.)(?:(.)\3|\2?\2))?\1$/,
@@ -32,17 +31,17 @@ export function matches(name, string) {
  * divisibleBy32
  * notThreeEndingIn00
  * sevenThroughThirtyOne
+ * notFileForFirstWithLookAround
 
  * IN PROG
  * masterCard    
  * mLComment
  * restrictedFloatingPoint
  * palindrome2358
- * notFileForFirstWithLookAround
- * 
+ 
  * TODO
  * adaFloat
  * notFileForFirstNoLookAround
  * c0ctal
  * 
- * */ 
+ **/
