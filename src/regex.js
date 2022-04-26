@@ -11,7 +11,7 @@ const regexes = {
   mLComment: /^\(\*.*\*\)$/,
   notFileForFirstNoLookAround: "",
   notFileForFirstWithLookAround: /^(?!(^file$)|(^for$)|(^first$)).*/,
-  cOctal: "",
+  cOctal: /^0[0-7]*$/,
   restrictedFloatingPoint: /^[-+]?[0-9]+()\.?([0-9])*(([eE][-+]?)?[0-9]{1,3})?$/,
   palindrome2358: /^(.)(?:(.)(?:(.)\3|\2?\2))?\1$/,
   noNegativeIntLits: /(?<![-\d])(\d+)/,
