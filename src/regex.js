@@ -9,7 +9,7 @@ const regexes = {
   divisibleBy32: /^0{1,4}$|^[01]*00000$/,
   sevenThroughThirtyOne: /^[7-9]$|^([12]\d|3[01])$/,
   mLComment: /^\(\*.*\*\)$/,
-  notFileForFirstNoLookAround: "",
+  notFileForFirstNoLookAround: /^(?!(file|for|first)$).*$/,
   notFileForFirstWithLookAround: /^(?!(^file$)|(^for$)|(^first$)).*/,
   cOctal: /^0[0-7]*$/,
   restrictedFloatingPoint: /^[-+]?[0-9]+()\.?([0-9])*(([eE][-+]?)?[0-9]{1,3})?$/,
