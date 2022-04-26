@@ -7,7 +7,7 @@ const regexes = {
   adaFloat: "",
   notThreeEndingInOO: /^(?!.*(.[oO]{2})).*/,
   divisibleBy32: /^0{1,4}$|^[01]*00000$/,
-  sevenThroughThirtyOne: /^[7-9]|[12]\d|3[01]$/,
+  sevenThroughThirtyOne: /^[7-9]$|^([12]\d|3[01])$/,
   mLComment: /^\(\*.*\*\)$/,
   notFileForFirstNoLookAround: "",
   notFileForFirstWithLookAround:
