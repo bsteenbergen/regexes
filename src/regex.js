@@ -4,15 +4,14 @@ const regexes = {
   visa: /^4[0-9]{12}(?:[0-9]{3})?$/,
   masterCard:
     /^5[1-5][0-9]{14}$|^(222[1-9]|22[3-9]{1}[0-9]{1}|2[3-6]{1}[0-9]{2}|27[0-1]|2720)[0-9]{12}$/,
-  adaFloat: /^[0-9]+(_[0-9]+)*(.[0-9]+(_[0-9]+)*)?((E|e)[+]?[0-9]+(_[0-9]+)*|(E|e)-[0-9]+(_[0-9]+)*)?$|^[0-9]+(_[0-9]+)*[#]([0-9A-Fa-f]+(_[0-9A-Fa-f]+)*)*(.([0-9A-Fa-f]+(_[0-9A-Fa-f]+)*)*)*#((E|e)[+]?[0-9]+(_[0-9]+)*|(E|e)-[0-9]+(_[0-9]+)*)?$/,
+  adaFloat:
+    /^[0-9]+(_[0-9]+)*(.[0-9]+(_[0-9]+)*)?((E|e)[+]?[0-9]+(_[0-9]+)*|(E|e)-[0-9]+(_[0-9]+)*)?$|^[0-9]+(_[0-9]+)*[#]([0-9A-Fa-f]+(_[0-9A-Fa-f]+)*)*(.([0-9A-Fa-f]+(_[0-9A-Fa-f]+)*)*)*#((E|e)[+]?[0-9]+(_[0-9]+)*|(E|e)-[0-9]+(_[0-9]+)*)?$/,
   notThreeEndingInOO: /.*(?<!(\d)|([oO]{2}))$/,
   divisibleBy32: /^0{1,4}$|^[01]*00000$/,
   sevenThroughThirtyOne: /^[7-9]$|^([12]\d|3[01])$/,
   mLComment: /^\(\*((?!(\*\))).)*\*\)$/,
- //  /^\(\*.*\*\)$/,
-  notFileForFirstNoLookAround: /^$|^[A-Za-eg-z][A-Za-z]*|^f[A-Za-hj-np-z][A-Za-z]*|^fi[A-Za-km-qs-z][A-Za-z]*$|^fil[A-Za-df-z][A-Za-z]*$|^file[A-Za-z]+$|^for[A-Za-z]+$|^fir[A-Za-rt-z][A-Za-z]*$|^firs[A-Za-su-z][A-Za-z]*$|^first[A-Za-z]+$/,
-  
-  //[^a-eg-z]+[a-z]*$|^f[a-hj-np-z]$|^fi[a-km-qs-z]*$|^fil[a-df-z]*$|^file[a-z]+$|/,
+  notFileForFirstNoLookAround:
+    /^$|^[A-Za-eg-z][A-Za-z]*|^f[A-Za-hj-np-z][A-Za-z]*|^fi[A-Za-km-qs-z][A-Za-z]*$|^fil[A-Za-df-z][A-Za-z]*$|^file[A-Za-z]+$|^for[A-Za-z]+$|^fir[A-Za-rt-z][A-Za-z]*$|^firs[A-Za-su-z][A-Za-z]*$|^first[A-Za-z]+$/,
   notFileForFirstWithLookAround: /^(?!(file|for|first)$).*$/,
   cOctal: /^0[0-7]*$/,
   restrictedFloatingPoint: /^[-+]?[0-9]+()\.?([0-9])*(([eE][-+]?)?[0-9]{1,3})?$/,
